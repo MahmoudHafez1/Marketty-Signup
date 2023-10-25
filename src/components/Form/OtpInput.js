@@ -33,7 +33,7 @@ const OtpInput = ({ onChange }) => {
 
   useEffect(() => {
     onChange(otp.join(''))
-  }, [otp])
+  }, [otp, onChange])
 
   return (
     <div className='flex space-x-2' dir='ltr'>

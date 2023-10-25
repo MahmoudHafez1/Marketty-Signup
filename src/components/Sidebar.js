@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { StarsIcon } from '../assets/icons'
-import sidebarShapes from '../assets/images/sidebarShapes.png'
+import sidebarShapes from '../assets/images/shapes.png'
 
 const Sidebar = ({
   icon,
