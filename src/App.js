@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import SignUp from './pages/SignUp'
+import './config/initI18n'
+import { useTranslation } from 'react-i18next'
 
 function App() {
+  const { i18n } = useTranslation()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div dir={i18n.language === 'en' ? 'ltr' : 'rtl'}>
+      <SignUp />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

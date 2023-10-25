@@ -1,0 +1,63 @@
+export const CurrentStepIcon = () => {
+  return (
+    <svg
+      width='32'
+      height='32'
+      viewBox='0 0 32 32'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <g filter='url(#filter0_d_304_101)'>
+        <g clip-path='url(#clip0_304_101)'>
+          <rect x='4' y='4' width='24' height='24' rx='12' fill='#F9F5FF' />
+          <rect x='4' y='4' width='24' height='24' rx='12' fill='#7244C8' />
+          <circle cx='16' cy='16' r='4' fill='white' />
+        </g>
+      </g>
+      <defs>
+        <filter
+          id='filter0_d_304_101'
+          x='0'
+          y='0'
+          width='32'
+          height='32'
+          filterUnits='userSpaceOnUse'
+          color-interpolation-filters='sRGB'
+        >
+          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            type='matrix'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+            result='hardAlpha'
+          />
+          <feMorphology
+            radius='4'
+            operator='dilate'
+            in='SourceAlpha'
+            result='effect1_dropShadow_304_101'
+          />
+          <feOffset />
+          <feColorMatrix
+            type='matrix'
+            values='0 0 0 0 0.956863 0 0 0 0 0.921569 0 0 0 0 1 0 0 0 1 0'
+          />
+          <feBlend
+            mode='normal'
+            in2='BackgroundImageFix'
+            result='effect1_dropShadow_304_101'
+          />
+          <feBlend
+            mode='normal'
+            in='SourceGraphic'
+            in2='effect1_dropShadow_304_101'
+            result='shape'
+          />
+        </filter>
+        <clipPath id='clip0_304_101'>
+          <rect x='4' y='4' width='24' height='24' rx='12' fill='white' />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
