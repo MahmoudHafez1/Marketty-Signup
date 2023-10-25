@@ -16,7 +16,7 @@ const validationSchema = Yup.object().shape({
     .min(8, 'Must be at least 8 characters.'),
 })
 
-const Detailsform = ({ setActiveStep }) => {
+const Detailsform = ({ setActiveStep, setEmail }) => {
   const { t, i18n } = useTranslation()
   const handleChangeLanguage = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en')
@@ -28,6 +28,7 @@ const Detailsform = ({ setActiveStep }) => {
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting }) => {
           setActiveStep((old) => old + 1)
+          setEmail(values.email)
         }}
       >
         {({

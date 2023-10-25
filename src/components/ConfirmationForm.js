@@ -4,10 +4,7 @@ import OtpInput from './Form/OtpInput'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const ConfirmationForm = ({
-  email = 'omarmouneer@gmail.com',
-  setActiveStep,
-}) => {
+const ConfirmationForm = ({ email, setActiveStep }) => {
   const [otp, setOtp] = useState('')
   const [isConfirmed, setIsConfirmed] = useState(false)
 

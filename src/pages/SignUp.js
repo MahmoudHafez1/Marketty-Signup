@@ -9,6 +9,7 @@ import { LargeMailIcon, StarsIcon, StoreIcon } from '../assets/icons'
 
 const SignUp = () => {
   const [activeStep, setActiveStep] = useState(0)
+  const [email, setEmail] = useState('')
   return (
     <div className='flex w-full h-[100vh]'>
       <div className='flex-1 h-full overflow-scroll flex flex-col gap-8 items-center px-[32px] py-[12px] justify-between'>
@@ -32,9 +33,9 @@ const SignUp = () => {
 
         <div className=' w-[95%] max-w-[360px] '>
           {activeStep === 0 ? (
-            <DetailsForm setActiveStep={setActiveStep} />
+            <DetailsForm setActiveStep={setActiveStep} setEmail={setEmail} />
           ) : activeStep === 1 ? (
-            <ConfirmationForm setActiveStep={setActiveStep} />
+            <ConfirmationForm setActiveStep={setActiveStep} email={email} />
           ) : (
             <StoreForm />
           )}
