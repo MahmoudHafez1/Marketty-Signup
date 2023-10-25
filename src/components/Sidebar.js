@@ -7,7 +7,7 @@ const Sidebar = ({
   title,
   info = 'Create a free account and get full access to all features for 30-days. No credit card needed. Get started in 2 minutes.',
 }) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   return (
     <div className='w-full h-full bg-primary'>
       <div className='w-full h-full bg-gradient-to-tr from-[rgba(0,0,0,0.5)] relative'>
@@ -26,7 +26,11 @@ const Sidebar = ({
             <p className='text-[##EAECF0] text-[18px] text-white'>{t(info)}</p>
           </div>
         </div>
-        <div className='xl:block hidden absolute top-[80%] translate-y-[-50%] translate-x-[-50%]'>
+        <div
+          className={`xl:block hidden absolute top-[80%] translate-y-[-50%] translate-x-[-50%] ${
+            i18n.language === 'ar' ? 'left-[100%]' : ''
+          }`}
+        >
           <HandDrownArrow />
         </div>
       </div>
