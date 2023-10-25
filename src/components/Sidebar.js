@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { HandDrownArrow } from '../assets/icons'
 import sidebarShapes from '../assets/images/shapes.png'
 
 const Sidebar = ({
@@ -24,6 +25,9 @@ const Sidebar = ({
             </h1>
             <p className='text-[##EAECF0] text-[18px] text-white'>{t(info)}</p>
           </div>
+        </div>
+        <div className='xl:block hidden absolute top-[80%] translate-y-[-50%] translate-x-[-50%]'>
+          <HandDrownArrow />
         </div>
       </div>
     </div>
